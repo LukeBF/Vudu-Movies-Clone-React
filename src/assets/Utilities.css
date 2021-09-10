@@ -1,0 +1,23 @@
+:root {
+  --primary-bg-color: #001f3f;
+  --sec-bg-color: #083358;
+  --section-bg-color: #ffffff;
+
+  --primary-font-color: #000000;
+  --sec-font-color: #ffffff;
+
+  --button-color: #29ec83;
+  --highlight-text: #0d63a5;
+}
+
+.grid {
+  display: grid;
+}
+
+.grid-col-8 {
+  grid-template-columns: repeat(8, 1fr);
+}
+
+.grid-row-gap-2 {
+  row-gap: 1rem;
+}

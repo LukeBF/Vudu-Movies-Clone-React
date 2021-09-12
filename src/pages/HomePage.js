@@ -7,7 +7,7 @@ import MovieRowContainer from '../components/MovieRowContainer'
 import Footer from '../components/Footer'
 
 // Images
-import BannerImage from '../img/banner/Pets-1920x900.jpg'
+import BannerImage from '../assets/img/banner/Pets-1920x900.jpg'
 
 const HomePage = () => {
     return (

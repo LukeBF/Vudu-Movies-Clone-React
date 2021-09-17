@@ -16,13 +16,6 @@ body {
   margin: 0 auto;
 }
 
-h1,
-h2,
-h3,
-p {
-  margin-bottom: 16px;
-}
-
 img {
   width: 100%;
 }
@@ -44,32 +37,59 @@ header a {
 
 /* Hero */
 #hero-section > div {
-  /* background-image: url("../img/banners/Pets-1920x900.jpg"); */
   height: 70vh;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
 }
 
+/* Genres */
+.genre-items {
+  /* background-color: black; */
+  height: 15vh;
+  place-items: stretch stretch;
+  justify-content: space-between;
+}
+
+.genre-item {
+  background-color: turquoise;
+  border-radius: 5px;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.genre-item p {
+  font-size: 1.2rem;
+}
+
 /* Movie Rows */
-#movie-list-section {
+#movie-list-section,
+#movie-genres {
   background-color: var(--sec-bg-color);
   color: var(--sec-font-color);
+  margin-top: 10px;
 }
 .row-container {
-  /* background-color: yellow; */
   padding: 16px 32px;
 }
 
-.row-container > div {
-  /* gap: 2rem; */
+.row-container > h2 {
+  margin-bottom: 20px;
 }
 
 /* Movie Cards */
 .movie-card {
   background-color: var(--section-bg-color);
   color: var(--primary-font-color);
+  position: relative;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+  transition: transform 450ms;
   /* width: 80%; */
+}
+
+.movie-card:hover {
+  transform: scale(1.08);
 }
 
 .card-content {
@@ -78,14 +98,20 @@ header a {
 
 .card-content > p {
   font-size: 0.8rem;
+  margin: 10px 0;
 }
 
-.card-content > p:nth-of-type(2) {
-  background-color: var(--highlight-text);
-  width: auto;
-  border-radius: 50px;
+.card-content > div > p {
   padding: 5px;
+  text-align: center;
+}
+
+.card-content > div {
+  width: 35%;
+  background-color: var(--highlight-text);
   color: var(--sec-font-color);
+  font-size: 0.8rem;
+  border-radius: 50px;
 }
 
 .card-content > h3 {

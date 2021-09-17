@@ -10,14 +10,24 @@
   --highlight-text: #0d63a5;
 }
 
+/* Grid Layouts */
 .grid {
   display: grid;
 }
 
-.grid-col-8 {
-  grid-template-columns: repeat(8, 1fr);
+.grid-col-5 {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.grid-col-6 {
+  grid-template-columns: repeat(6, 1fr);
 }
 
 .grid-column-gap-2 {
   column-gap: 20px;
+}
+
+/* Link Styles */
+a {
+  text-decoration: none;
 }

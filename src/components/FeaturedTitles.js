@@ -1,15 +1,23 @@
-import React, { useContext } from 'react'
+import React, {useState,useEffect} from 'react'
 
 //Components
 import MovieCard from './MovieCard'
-import HomePage from '../pages/HomePage'
 
-//Context
-import MovieContext from '../context/MovieContext'
+const FeaturedContainer = ({title}) => {
 
-const MovieRowContainer = ({title}) => {
+    const [movies, setMovies] = useState([]);
 
-    const {movies} = useContext(MovieContext)
+    useEffect(()=>{
+        fetch("http://localhost:3000/movies/featured?isFeatured=true")
+        
+        .then(res=>res.json())
+        .then(data=>{
+          
+          // console.log(data)
+          setMovies(data.data)
+        })
+    
+      },[]);
 
     return (
         <div>
@@ -25,4 +33,4 @@ const MovieRowContainer = ({title}) => {
     )
 }
 
-export default MovieRowContainer
+export default FeaturedContainer

@@ -16,8 +16,10 @@ const MovieCard = (props) => {
             </a>
             <div className="card-content">
                 <h3>{props.title}</h3>
-                <p>{props.genre}</p>
-                <p>{props.rating}</p>
+                {/* <p>{props.genre}</p> */}
+                <div>
+                    <p>{props.rating}</p>
+                </div>
                 <p>{props.length}</p>
                 <p>2012</p>
             </div>

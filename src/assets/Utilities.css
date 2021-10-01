@@ -23,8 +23,12 @@
   grid-template-columns: repeat(6, 1fr);
 }
 
-.grid-column-gap-2 {
+.grid-column-gap {
   column-gap: 20px;
+}
+
+.grid-row-gap {
+  gap: 40px;
 }
 
 /* Link Styles */

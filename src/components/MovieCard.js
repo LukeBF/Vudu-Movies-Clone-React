@@ -10,10 +10,13 @@ const MovieCard = (props) => {
 
     return (
         <div  className="movie-card">
-            <a href = "/"> 
-                {/* <img src={DefaultPoster} alt="default poster image"/>    */}
-                <img src={moviePoster} alt={`props.title`}poster image/>
-            </a>
+            <div className="card-poster">
+                <a href = "/"> 
+                    {/* <img src={DefaultPoster} alt="default poster image"/>    */}
+                    <img src={moviePoster} alt={`props.title`}poster image/>
+                </a>
+            </div>
+            
             <div className="card-content">
                 <h3>{props.title}</h3>
                 {/* <p>{props.genre}</p> */}
@@ -21,7 +24,7 @@ const MovieCard = (props) => {
                     <p>{props.rating}</p>
                 </div>
                 <p>{props.length}</p>
-                <p>2012</p>
+                <p>2012</p>   
             </div>
         </div>
     )

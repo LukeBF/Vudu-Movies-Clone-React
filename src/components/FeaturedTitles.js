@@ -3,7 +3,7 @@ import React, {useState,useEffect} from 'react'
 //Components
 import MovieCard from './MovieCard'
 
-const FeaturedContainer = ({title}) => {
+const FeaturedContainer = ({heading}) => {
 
     const [movies, setMovies] = useState([]);
 
@@ -22,8 +22,8 @@ const FeaturedContainer = ({title}) => {
     return (
         <div>
             <div className="row-container">
-                <h2>{title}</h2>
-                <div className="grid grid-col-6 grid-column-gap-2">
+                <h2>{heading}</h2>
+                <div className="grid grid-col-6 grid-column-gap grid-row-gap">
                     {movies.map((movie)=>(
                         <MovieCard key={movie.id} id={movie.id} poster={movie.imgPath} title={movie.title} genre={movie.genre} rating={movie.rating} length={movie.length}/>
                     ))}

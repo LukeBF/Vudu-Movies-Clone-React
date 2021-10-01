@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.hide {
+  display: none;
+}
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+}
+
+.grid-col-3 {
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-col-4 {
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.2rem;
+}
+
+.form-container {
+  width: 30%;
+  margin: 0 auto;
+}
+
+.input:hover {
+  border: 1px solid #1b0c1d;
+}
+
+.control textarea:hover {
+  border: 1px solid #1b0c1d;
+}
+
+.control button {
+  background-color: #1b0c1d;
+  color: #ffffff;
+}
+
+.control button:hover {
+  color: #ffffff;
+}
+
+.button {
+  border-style: none;
+  color: #1b0c1d;
+  background-color: #06f3b8;
+}
+
+#project-title {
+  -webkit-text-decoration: underline #06f3b8;
+          text-decoration: underline #06f3b8;
+}
+
+.footer {
+  background-color: #1b0c1d;
+  color: #ffffff;
+}
+
+.footer a {
+  color: #ffffff;
+}
+
+.projects-container > h2 {
+  color: #000000;
+}
+/*# sourceMappingURL=main.css.map */

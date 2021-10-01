@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useContext,useEffect} from 'react'
 
 // Components
 import Header from '../components/Header'
@@ -10,9 +10,28 @@ import FeaturedContainer from '../components/FeaturedTitles'
 
 // Images
 import BannerImage from '../assets/img/banner/Pets-1920x900.jpg'
-import FeaturedTitles from '../components/FeaturedTitles'
+
+// Context
+import MovieContext from '../context/MovieContext'
+
 
 const HomePage = () => {
+
+    const {movies,setMovies} = useContext(MovieContext)
+
+    useEffect(()=>{
+        fetch("http://localhost:3000/movies/")
+        
+        .then(res=>res.json())
+        .then(data=>{
+          
+        // console.log(data)
+        setMovies(data.data)    
+        }) 
+
+        
+    },[]);
+
     return (
         <div>
             <Header />
@@ -23,8 +42,8 @@ const HomePage = () => {
                 <Genres />
             </section>
             <section id="movie-list-section">
-                <FeaturedContainer title="Featured"/>
-                <MovieRowContainer title="Browse All Titles"/>
+                <FeaturedContainer heading="Featured"/>
+                <MovieRowContainer heading="Browse All Titles"/>
             </section>
             <Footer />
         </div>

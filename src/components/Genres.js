@@ -1,30 +1,31 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 const Genres = () => {
     return (
         <div>
             <div className="row-container">
                 <h2>Genres</h2>
-                <div className="genre-items grid grid-col-5 grid-column-gap-2">
-                    <a href=""><div className="grid genre-item">
+                <div className="genre-items grid grid-col-5 grid-column-gap">
+                    <Link to=""><div className="grid genre-item">
                          <p>Action</p>
-                    </div></a>
+                    </div></Link>
                     
-                    <a href=""><div className="grid genre-item">
+                    <Link to=""><div className="grid genre-item">
                         <p>Comedy</p>
-                    </div></a>
+                    </div></Link>
                     
-                    <a href=""><div className="grid genre-item">
+                    <Link to=""><div className="grid genre-item">
                         <p>Thriller</p>
-                    </div></a>
+                    </div></Link>
                     
-                    <a href=""><div className="grid genre-item">
+                    <Link to=""><div className="grid genre-item">
                         <p>Animation</p>
-                    </div></a> 
+                    </div></Link> 
 
-                    <a href=""><div className="grid genre-item">
+                    <Link to=""><div className="grid genre-item">
                         <p>Drama</p>
-                    </div></a> 
+                    </div></Link> 
                 </div>
             </div>
         </div>

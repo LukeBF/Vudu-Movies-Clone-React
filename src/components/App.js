@@ -2,7 +2,10 @@ import React,{useState,useEffect} from 'react'
 
 // Components
 import HomePage from '../pages/HomePage'
-import FeaturedContainer from './FeaturedTitles'
+import MoviesPage from '../pages/MoviesPage'
+import ShowsPage from '../pages/ShowsPage'
+import LogInPage from '../pages/LogInPage'
+// import FeaturedContainer from './FeaturedTitles'
 
 // CSS
 import '../assets/App.css'
@@ -11,6 +14,14 @@ import '../assets/Utilities.css'
 //Context
 import MovieContext from '../context/MovieContext'
 // import FeaturedContext from '../context/FeaturedContext'
+
+// Router
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  // Link
+} from "react-router-dom";
 
 
 const App = () => {
@@ -32,12 +43,26 @@ const App = () => {
   },[]);
 
   return (
+
     <div id="page-container">
-      <MovieContext.Provider value={{movies,setMovies}}>
-        {/* <FeaturedContainer.Provider value={{featuredShows,setFeaturedShows}}> */}
-          <HomePage />  
-        {/* </FeaturedContainer.Provider> */}
-      </MovieContext.Provider>
+      <Router>
+        <MovieContext.Provider value={{movies,setMovies}}>
+          <Switch>
+              <Route exact path="/">
+                    <HomePage />  
+              </Route>
+              <Route path="/movies">
+                  <MoviesPage />
+              </Route>
+              <Route path="/tvshows">
+                  <ShowsPage />
+              </Route>
+              <Route path="/login">
+                  <LogInPage />
+              </Route>
+          </Switch>
+        </MovieContext.Provider>
+      </Router>
     </div>
   )
 }

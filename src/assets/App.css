@@ -59,6 +59,10 @@ header a {
   align-items: center;
 }
 
+.genre-item:hover {
+  border: 3px solid var(--sec-font-color);
+}
+
 .genre-item p {
   font-size: 1.2rem;
 }
@@ -96,30 +100,110 @@ header a {
   padding: 12px;
 }
 
+.card-content > h3,
+.card-content > div {
+  display: inline-block;
+}
+
+.card-content > div {
+  position: absolute;
+  right: 10px;
+}
+
 .card-content > p {
   font-size: 0.8rem;
   margin: 10px 0;
 }
 
-.card-content > div > p {
+.card-content > div:nth-last-of-type(1) > p {
   padding: 5px;
   text-align: center;
 }
 
 .card-content > div {
-  width: 35%;
   background-color: var(--highlight-text);
+  width: 55px;
   color: var(--sec-font-color);
   font-size: 0.8rem;
   border-radius: 50px;
 }
 
 .card-content > h3 {
-  font-size: 0.9rem;
+  width: 75%;
+  font-size: 1.2rem;
 }
 
 #movie-list-section > div > h2 {
   margin-top: 16px;
 }
 
+#movie-list-section > h2 {
+  padding: 16px 32px;
+  background-color: orange;
+  color: var(--primary-font-color);
+}
+
+/* Log In */
+.login-bg {
+  background-image: url("../assets/img/background/login-bg.jpg");
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.login-wrapper {
+  color: var(--sec-font-color);
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  position: relative;
+  width: 100%;
+  max-width: 380px;
+  padding: 80px 40px 40px;
+  background-color: rgba(0, 0, 0, 0.7);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+
+.form::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  pointer-events: none;
+}
+
+.form h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.form-input > input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 1rem;
+  border: none;
+  border-bottom: 1px solid var(--section-bg-color);
+  outline: none;
+  background-color: transparent;
+  color: inherit;
+}
+
+/* .form-input > label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 1rem;
+  pointer-events: none;
+} */
 /* Footer */

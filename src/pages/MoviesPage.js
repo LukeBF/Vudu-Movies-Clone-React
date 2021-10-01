@@ -26,7 +26,7 @@ const MoviesPage = () => {
 
     return (
         
-        <div>
+        <div id="page-container">
             <Header />
             <section id="movie-list-section">
                 <h2>Movies</h2>

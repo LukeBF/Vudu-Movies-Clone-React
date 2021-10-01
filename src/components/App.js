@@ -8,8 +8,8 @@ import LogInPage from '../pages/LogInPage'
 // import FeaturedContainer from './FeaturedTitles'
 
 // CSS
-import '../assets/App.css'
-import '../assets/Utilities.css'
+// import '../assets/App.css'
+// import '../assets/Utilities.css'
 
 //Context
 import MovieContext from '../context/MovieContext'
@@ -44,7 +44,7 @@ const App = () => {
 
   return (
 
-    <div id="page-container">
+    <div>
       <Router>
         <MovieContext.Provider value={{movies,setMovies}}>
           <Switch>

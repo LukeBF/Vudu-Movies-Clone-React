@@ -23,7 +23,7 @@ const ShowsPage = () => {
     },[]);
 
     return (
-        <div>
+        <div id="page-container">
             <Header />
             <section id="movie-list-section">
                 <h2>TV-Shows</h2>

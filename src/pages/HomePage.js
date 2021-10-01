@@ -8,6 +8,10 @@ import Footer from '../components/Footer'
 import Genres from '../components/Genres'
 import FeaturedContainer from '../components/FeaturedTitles'
 
+// CSS
+import '../assets/App.css'
+import '../assets/Utilities.css'
+
 // Images
 import BannerImage from '../assets/img/banner/Pets-1920x900.jpg'
 
@@ -33,7 +37,7 @@ const HomePage = () => {
     },[]);
 
     return (
-        <div>
+        <div id="page-container">
             <Header />
             <section id="hero-section">
                 <Hero image={BannerImage}/>

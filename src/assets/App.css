@@ -7,7 +7,7 @@
 /* General Styles */
 body {
   font-family: "Montserrat", sans-serif;
-  background-color: var(--primary-font-color);
+  /* background-color: var(--primary-font-color); */
   min-height: 100vh;
 }
 
@@ -189,6 +189,7 @@ header a {
 
 .login-wrapper p {
   margin: 10px 10px;
+  color: var(--primary-font-color);
 }
 
 .login-wrapper p span a {
@@ -201,7 +202,8 @@ header a {
   width: 100%;
   max-width: 380px;
   padding: 80px 40px 40px;
-  background-color: rgba(13, 99, 165, 0.7);
+  background-color: rgba(0, 0, 0, 0.8);
+  /* background-color: rgba(13, 99, 165, 0.7); */
   /* box-shadow: 0 15px 25px rgba(255, 255, 255, 0.3); */
   border-radius: 10px;
 }
@@ -232,6 +234,27 @@ header a {
   outline: none;
   background-color: transparent;
   color: inherit;
+}
+
+/* Admin Page */
+.manage-entities {
+  display: inline-block;
+  height: 150px;
+  width: 300px;
+}
+
+.box:not(:last-child) {
+  margin-bottom: 0;
+}
+
+.admin-main-container {
+  height: 100%;
+}
+
+/* Movie Form */
+.movie-form-container {
+  width: 70%;
+  margin: 0 auto;
 }
 
 /* .form-input > label {

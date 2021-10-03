@@ -6,6 +6,7 @@ import MoviesPage from '../pages/MoviesPage'
 import ShowsPage from '../pages/ShowsPage'
 import LogInPage from '../pages/LogInPage'
 import AdminPage from '../pages/AdminPage'
+import CreateMoviePage from '../pages/CreateMoviePage'
 // import FeaturedContainer from './FeaturedTitles'
 
 // CSS
@@ -64,6 +65,9 @@ const App = () => {
               </Route>
               <Route path="/admin">
                   <AdminPage />
+              </Route>
+              <Route path="/register-movie">
+                  <CreateMoviePage />
               </Route>
           </Switch>
         </MovieContext.Provider>

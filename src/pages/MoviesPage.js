@@ -25,14 +25,17 @@ const MoviesPage = () => {
     },[]);
 
     return (
-        
-        <div id="page-container">
+        <>
             <Header />
-            <section id="movie-list-section">
-                <h2>Movies</h2>
-                <MovieRowContainer />
-            </section>
-        </div>
+            <div id="page-container">
+                <section id="movie-list-section">
+                    <h2>Movies</h2>
+                    <MovieRowContainer />
+                </section>
+            </div>
+        </>
+        
+            
         
     )
 }

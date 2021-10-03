@@ -2,6 +2,7 @@ import React from 'react'
 
 const LogInContainer = () => {
     return (
+    
         <div className="login-wrapper grid">
             <form action="" className="form grid">
                 <h2>Login</h2>
@@ -15,6 +16,7 @@ const LogInContainer = () => {
                 </div>
                 <button>Sign In</button>
             </form>
+            <p>Don't have an account?<span><a href="#">Sign up</a></span></p>
         </div>
     )
 }

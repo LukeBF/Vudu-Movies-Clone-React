@@ -8,13 +8,23 @@ const LogIn = () => {
 
 
     return (
-        <div className="login-bg">
-            <div id="page-container">
-                <Header />
-                <LogInContainer />
+        <>
+            <Header />
+            <div className="login-bg">
+                <div id="page-container">
+                    <LogInContainer />
+                </div>
             </div>
             
-        </div>
+            
+        </>
+        // <div className="login-bg">
+        //     <div id="page-container">
+        //         <Header />
+        //         <LogInContainer />
+        //     </div>
+            
+        // </div>
     )
 }
 

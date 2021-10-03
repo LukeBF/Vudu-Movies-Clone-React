@@ -23,8 +23,8 @@ const MovieCard = (props) => {
                 <div>
                     <p>{props.rating}</p>
                 </div>
-                <p>{props.length}</p>
-                <p>2012</p>   
+                <p style={{marginBottom:20}}>{props.length}</p>
+                <p style={{position:"absolute", bottom:0}}>{props.release}</p>   
             </div>
         </div>
     )

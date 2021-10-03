@@ -9,11 +9,11 @@ import Genres from '../components/Genres'
 import FeaturedContainer from '../components/FeaturedTitles'
 
 // CSS
-import '../assets/App.css'
-import '../assets/Utilities.css'
+
 
 // Images
 import BannerImage from '../assets/img/banner/Pets-1920x900.jpg'
+import AvengersBanner from '../assets/img/banner/avengers.jpg'
 
 // Context
 import MovieContext from '../context/MovieContext'
@@ -37,20 +37,22 @@ const HomePage = () => {
     },[]);
 
     return (
-        <div id="page-container">
+        <>
             <Header />
-            <section id="hero-section">
-                <Hero image={BannerImage}/>
-            </section>
-            <section id="movie-genres">
-                <Genres />
-            </section>
-            <section id="movie-list-section">
-                <FeaturedContainer heading="Featured"/>
-                <MovieRowContainer heading="Browse All Titles"/>
-            </section>
-            <Footer />
-        </div>
+                <div id="page-container">
+                <section id="hero-section">
+                    <Hero image={AvengersBanner}/>
+                </section>
+                <section id="movie-genres">
+                    <Genres />
+                </section>
+                <section id="movie-list-section">
+                    <FeaturedContainer heading="Featured"/>
+                    <MovieRowContainer heading="Browse All Titles"/>
+                </section>
+                <Footer />
+            </div>
+        </>
     )
 }
 

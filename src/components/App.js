@@ -5,11 +5,13 @@ import HomePage from '../pages/HomePage'
 import MoviesPage from '../pages/MoviesPage'
 import ShowsPage from '../pages/ShowsPage'
 import LogInPage from '../pages/LogInPage'
+import AdminPage from '../pages/AdminPage'
 // import FeaturedContainer from './FeaturedTitles'
 
 // CSS
-// import '../assets/App.css'
-// import '../assets/Utilities.css'
+import "bulma/css/bulma.css"
+import '../assets/App.css'
+import '../assets/Utilities.css'
 
 //Context
 import MovieContext from '../context/MovieContext'
@@ -59,6 +61,9 @@ const App = () => {
               </Route>
               <Route path="/login">
                   <LogInPage />
+              </Route>
+              <Route path="/admin">
+                  <AdminPage />
               </Route>
           </Switch>
         </MovieContext.Provider>

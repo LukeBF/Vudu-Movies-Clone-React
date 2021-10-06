@@ -9,8 +9,11 @@ import AdminPage from '../pages/AdminPage'
 import CreateMoviePage from '../pages/CreateMoviePage'
 // import FeaturedContainer from './FeaturedTitles'
 
-// CSS
+// bulma css
 import "bulma/css/bulma.css"
+
+// .css file generated from .scss 
+import '../assets/css/main.css'
 import '../assets/App.css'
 import '../assets/Utilities.css'
 

@@ -3,8 +3,8 @@ import React from 'react'
 const LogInContainer = () => {
     return (
     
-        <div className="login-wrapper grid">
-            <form action="" className="form grid">
+        <div className="login-wrapper has-text-white">
+            <form action="" className="form">
                 <h2>Login</h2>
                 <div className="form-input">
                     <input type="text" name="login-user" id="login-user"></input>

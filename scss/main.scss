@@ -1,0 +1,71 @@
+@charset "utf-8";
+$dark-blue: #001f3f;
+$royal-blue: #4169e1;
+$prussian-blue: #083358;
+$highlight-yellow: #ffa500;
+$black: #000000;
+$white: #ffffff;
+
+// General colors
+$scheme-main: $dark-blue;
+
+$navbar-background-color: $royal-blue;
+
+// Custom CSS
+.login-wrapper {
+  height: 60vh;
+  width: 25%;
+  margin: 0 auto;
+  //   justify-content: center;
+  //   align-items: center;
+}
+
+.login-wrapper p {
+  margin: 10px 10px;
+}
+
+.login-wrapper p span a {
+  margin-left: 20px;
+  color: $highlight-yellow;
+}
+
+.form {
+  position: relative;
+  width: 100%;
+  max-width: 380px;
+  padding: 80px 40px 40px;
+  background-color: rgba(0, 0, 0, 0.8);
+  /* background-color: rgba(13, 99, 165, 0.7); */
+  /* box-shadow: 0 15px 25px rgba(255, 255, 255, 0.3); */
+  border-radius: 10px;
+}
+
+.form > button {
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.form-input > input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 1rem;
+  border: none;
+  border-bottom: 1px solid $white;
+  outline: none;
+  background-color: transparent;
+  color: inherit;
+}
+
+/* Admin Page */
+
+// Import only what you need from Bulma
+@import "../node_modules/bulma/sass/utilities/_all.sass";
+@import "../node_modules/bulma/sass/base/_all.sass";
+@import "../node_modules/bulma/sass/elements/button.sass";
+@import "../node_modules/bulma/sass/elements/container.sass";
+@import "../node_modules/bulma/sass/elements/title.sass";
+@import "../node_modules/bulma/sass/form/_all.sass";
+@import "../node_modules/bulma/sass/components/navbar.sass";
+@import "../node_modules/bulma/sass/layout/hero.sass";
+@import "../node_modules/bulma/sass/layout/section.sass";

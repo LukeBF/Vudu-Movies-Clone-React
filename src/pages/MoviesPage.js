@@ -9,15 +9,13 @@ import MovieContext from '../context/MovieContext'
 
 const MoviesPage = () => {
 
-    const {movies,setMovies} = useContext(MovieContext)
+    const {setMovies} = useContext(MovieContext)
 
     useEffect(()=>{
         fetch("http://localhost:3000/movies/allmovies?type=movies")
         
         .then(res=>res.json())
         .then(data=>{
-          
-        // console.log(data)
         setMovies(data.data)    
         }) 
 

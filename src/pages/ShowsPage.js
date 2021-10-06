@@ -3,7 +3,7 @@ import React,{useContext,useEffect} from "react";
 // Components
 import Header from "../components/Header";
 import MovieRowContainer from '../components/MovieRowContainer'
-import MovieCard from '../components/MovieCard'
+// import MovieCard from '../components/MovieCard'
 
 // Context
 import MovieContext from '../context/MovieContext'

@@ -6,7 +6,7 @@ const Header = () => {
 
     return (
         <header>
-            <nav className="navbar is-black">
+            <nav className="navbar">
                 <div className="navbar-brand">
                 <a class="navbar-item" href="https://bulma.io">
                     {/* <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28"/> */}

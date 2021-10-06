@@ -93,6 +93,7 @@ header a {
   color: var(--sec-font-color);
   margin-top: 10px;
 }
+
 .row-container {
   padding: 16px 32px;
 }
@@ -180,38 +181,22 @@ header a {
   margin-bottom: 2rem;
 }
 
-.login-wrapper {
+/* .login-wrapper {
   color: var(--sec-font-color);
   height: 50vh;
   justify-content: center;
   align-items: center;
-}
+} */
 
-.login-wrapper p {
+/* .login-wrapper p {
   margin: 10px 10px;
   color: var(--primary-font-color);
-}
+} */
 
-.login-wrapper p span a {
-  margin-left: 20px;
-  color: var(--highlight-yellow);
-}
-
-.form {
-  position: relative;
-  width: 100%;
-  max-width: 380px;
-  padding: 80px 40px 40px;
-  background-color: rgba(0, 0, 0, 0.8);
-  /* background-color: rgba(13, 99, 165, 0.7); */
-  /* box-shadow: 0 15px 25px rgba(255, 255, 255, 0.3); */
-  border-radius: 10px;
-}
-
-.form > button {
+/* .form > button {
   margin-top: 20px;
   padding: 10px;
-}
+} */
 
 /* .form::before {
   content: "";
@@ -225,7 +210,7 @@ header a {
   pointer-events: none;
 } */
 
-.form-input > input {
+/* .form-input > input {
   width: 100%;
   padding: 10px 0;
   font-size: 1rem;
@@ -234,10 +219,10 @@ header a {
   outline: none;
   background-color: transparent;
   color: inherit;
-}
+} */
 
 /* Admin Page */
-.manage-entities {
+/* .manage-entities {
   display: inline-block;
   height: 150px;
   width: 300px;
@@ -249,7 +234,7 @@ header a {
 
 .admin-main-container {
   height: 100%;
-}
+} */
 
 /* Movie Form */
 .movie-form-container {

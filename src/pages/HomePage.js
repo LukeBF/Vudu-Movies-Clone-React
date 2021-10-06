@@ -10,9 +10,8 @@ import FeaturedContainer from '../components/FeaturedTitles'
 
 // CSS
 
-
 // Images
-import BannerImage from '../assets/img/banner/Pets-1920x900.jpg'
+// import BannerImage from '../assets/img/banner/Pets-1920x900.jpg'
 import AvengersBanner from '../assets/img/banner/avengers.jpg'
 
 // Context
@@ -21,7 +20,7 @@ import MovieContext from '../context/MovieContext'
 
 const HomePage = () => {
 
-    const {movies,setMovies} = useContext(MovieContext)
+    const {setMovies} = useContext(MovieContext)
 
     useEffect(()=>{
         fetch("http://localhost:3000/movies/")
@@ -32,8 +31,6 @@ const HomePage = () => {
         // console.log(data)
         setMovies(data.data)    
         }) 
-
-        
     },[]);
 
     return (

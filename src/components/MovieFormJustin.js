@@ -2,7 +2,7 @@ import React,{useState,useContext} from 'react'
 
 import AdminHeader from '../components/AdminHeader'
 
-// import MovieContext from '../context/MovieContext'
+import MovieContext from '../context/MovieContext'
 // import { useHistory } from 'react-router'
 
 // const movieService = require("../services/MovieService.js")
@@ -11,7 +11,7 @@ const MovieForm = () => {
 
     // const history = useHistory()
 
-    // const {movies,setMovies} = useContext(MovieContext)
+    const {movies,setMovies} = useContext(MovieContext)
 
     const [movieData, setMovieData] = useState({
         title:"",
@@ -36,22 +36,34 @@ const MovieForm = () => {
 
 
        e.preventDefault();
+       const movieForm = new movieData()
+       movieForm.append("title",movieData.title)
+       movieForm.append("genre",movieData.genre)
+       movieForm.append("type",movieData.type)
+       movieForm.append("rating",movieData.rating)
+       movieForm.append("length",movieData.length)
+       movieForm.append("release",movieData.release)
+       movieForm.append("rentalPrice",movieData.rentalPrice)
+       movieForm.append("purchasePrice",movieData.purchasePrice)
+       movieForm.append("isFeatured",movieData.isFeatured)
+       movieForm.append("overview",movieData.overview)
 
        fetch("http://localhost:3000/movies",{
             method:"POST",
-            headers: {
-                'Content-Type': 'application/json',
-                // 'Content-Type': 'application/x-www-form-urlencoded',
-              },
-              body: JSON.stringify(movieData)
+            // headers: {
+            //     'Content-Type': 'application/json',
+            //     // 'Content-Type': 'application/x-www-form-urlencoded',
+            //   },
+            //   body: JSON.stringify(movieData)
+                body: movieForm
              
        })
 
        .then(res=>res.json())
        .then(json=>{
-            alert(json.message)
-            console.log(json.data)
-            // setMovieData([...movieData, json.data])
+            // alert(json.message)
+            // alert(json.data)
+            setMovieData([...movies, json.data])
             // console.log(movieData)
             // console.log(json)
             // history.push("/")

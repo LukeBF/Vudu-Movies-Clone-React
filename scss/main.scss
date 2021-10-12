@@ -11,50 +11,18 @@ $scheme-main: $dark-blue;
 
 $navbar-background-color: $royal-blue;
 
-// Custom CSS
-.login-wrapper {
-  height: 60vh;
-  width: 25%;
-  margin: 0 auto;
-  //   justify-content: center;
-  //   align-items: center;
+//Signup form
+.main-wrapper button {
+  background-color: $highlight-yellow;
+  border: none;
 }
 
-.login-wrapper p {
-  margin: 10px 10px;
-}
-
-.login-wrapper p span a {
-  margin-left: 20px;
+.main-wrapper h2 {
   color: $highlight-yellow;
 }
 
-.form {
-  position: relative;
-  width: 100%;
-  max-width: 380px;
-  padding: 80px 40px 40px;
-  background-color: rgba(0, 0, 0, 0.8);
-  /* background-color: rgba(13, 99, 165, 0.7); */
-  /* box-shadow: 0 15px 25px rgba(255, 255, 255, 0.3); */
-  border-radius: 10px;
-}
-
-.form > button {
-  margin-top: 20px;
-  padding: 10px;
-  border-radius: 5px;
-}
-
-.form-input > input {
-  width: 100%;
-  padding: 10px 0;
-  font-size: 1rem;
-  border: none;
-  border-bottom: 1px solid $white;
+.form-wrapper input {
   outline: none;
-  background-color: transparent;
-  color: inherit;
 }
 
 /* Admin Page */

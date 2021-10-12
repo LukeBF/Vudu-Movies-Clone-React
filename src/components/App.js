@@ -28,6 +28,7 @@ import {
   Route,
   // Link
 } from "react-router-dom";
+import SignupPage from '../pages/SignupPage'
 
 
 const App = () => {
@@ -65,6 +66,9 @@ const App = () => {
               </Route>
               <Route path="/login">
                   <LogInPage />
+              </Route>
+              <Route path="/signup">
+                  <SignupPage />
               </Route>
               <Route path="/admin">
                   <AdminPage />

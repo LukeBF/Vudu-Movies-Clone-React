@@ -2,21 +2,19 @@ import React from 'react'
 
 // Components
 import Header from '../components/Header'
-import LogInContainer from '../components/LogInContainer'
+import LoginForm from '../components/LoginForm'
 
 const LogIn = () => {
 
 
     return (
         <>
-            <Header />
-            <div className="login-bg">
+            {/* <Header /> */}
+            <div className="login-bg hero is-fullheight has-text-white">
                 <div id="page-container">
-                    <LogInContainer />
+                    <LoginForm />
                 </div>
             </div>
-            
-            
         </>
         // <div className="login-bg">
         //     <div id="page-container">

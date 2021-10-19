@@ -19,6 +19,7 @@ import '../assets/Utilities.css'
 
 //Context
 import MovieContext from '../context/MovieContext'
+import TableDataContext from '../context/TableDataContext'
 // import FeaturedContext from '../context/FeaturedContext'
 
 // Router
@@ -34,6 +35,15 @@ import SignupPage from '../pages/SignupPage'
 const App = () => {
 
   const [movies, setMovies] = useState([]);
+  const [rows, setRows] = useState([
+    {
+      title: movies.title,
+      rating: movies.rating,
+      length: movies.length,
+      release: movies.release,
+      poster: movies.imgPath
+    }
+  ]);
   // const [featuredShows, setFeaturedShows] = useState([]);
   // console.log(movies)
 
@@ -54,6 +64,7 @@ const App = () => {
     <div>
       <Router>
         <MovieContext.Provider value={{movies,setMovies}}>
+        <TableDataContext.Provider value={{rows,setRows}}>
           <Switch>
               <Route exact path="/">
                     <HomePage />  
@@ -64,10 +75,10 @@ const App = () => {
               <Route path="/tvshows">
                   <ShowsPage />
               </Route>
-              <Route path="/login">
+              <Route path="/users/login">
                   <LogInPage />
               </Route>
-              <Route path="/signup">
+              <Route path="/users/register">
                   <SignupPage />
               </Route>
               <Route path="/admin">
@@ -77,6 +88,7 @@ const App = () => {
                   <CreateMoviePage />
               </Route>
           </Switch>
+        </TableDataContext.Provider>
         </MovieContext.Provider>
       </Router>
     </div>

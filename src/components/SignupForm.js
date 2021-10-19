@@ -9,7 +9,7 @@ const SignupForm = () => {
                 </div>
                 <form className="form-wrapper box mt-5 px-5">
                     <div className="fname mt-4">
-                        <label className="labeL">First Name</label>
+                        <label className="label">First Name</label>
                         <input className="input has-text-black has-background-white" type="text"></input>
                     </div>
 

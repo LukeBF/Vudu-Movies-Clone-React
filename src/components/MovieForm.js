@@ -3,13 +3,13 @@ import React,{useState,useContext} from 'react'
 import AdminHeader from '../components/AdminHeader'
 
 // import MovieContext from '../context/MovieContext'
-// import { useHistory } from 'react-router'
+ import { useHistory } from 'react-router'
 
 // const movieService = require("../services/MovieService.js")
 
 const MovieForm = () => {
 
-    // const history = useHistory()
+    const history = useHistory()
 
     // const {movies,setMovies} = useContext(MovieContext)
 
@@ -20,7 +20,7 @@ const MovieForm = () => {
         rating:"",
         length:"",
         release:"",
-        // imgPath:"",
+        imgPath:"",
         rentalPrice:"",
         purchasePrice:"",
         isFeatured:false,
@@ -37,24 +37,41 @@ const MovieForm = () => {
 
        e.preventDefault();
 
+
+        const formData = new FormData();
+       // const fileField = document.querySelector('input[type="file"]');
+
+        formData.append('title', movieData.title);
+        formData.append('genre', movieData.genre);
+        formData.append('rating', movieData.rating);
+        formData.append('length', movieData.length);
+        formData.append('imgPath', movieData.imgPath.files[0]);
+        formData.append('isFeatured', movieData.isFeatured);
+        formData.append('rentalPrice', movieData.rentalPrice);
+        formData.append('purchasePrice', movieData.purchasePrice);
+        formData.append('type', movieData.type);
+        formData.append('release', movieData.release);
+        formData.append('overview', movieData.overview);
+
+
+
+
+    
        fetch("http://localhost:3000/movies",{
             method:"POST",
-            headers: {
-                'Content-Type': 'application/json',
-                // 'Content-Type': 'application/x-www-form-urlencoded',
-              },
-              body: JSON.stringify(movieData)
+     
+              body:formData
              
        })
 
        .then(res=>res.json())
        .then(json=>{
             alert(json.message)
-            console.log(json.data)
+           
             // setMovieData([...movieData, json.data])
             // console.log(movieData)
             // console.log(json)
-            // history.push("/")
+            history.push("/")
         })
         .catch(err=>{
             console.log(`Error: ${err}`)
@@ -64,7 +81,7 @@ const MovieForm = () => {
 
     return (
         <>
-            <AdminHeader />
+            {/* <AdminHeader /> */}
            
             {/* <section className="hero is-black">
                     <div className="hero-body">
@@ -80,7 +97,7 @@ const MovieForm = () => {
                         <div className="field">
                             <label className="label has-text-white">Title</label>
                             <div className="control">
-                                <input className="input has-text-light" placeholder="e.g. Titanic" value={movieData.title} onChange={(e)=>{
+                                <input className="input" placeholder="e.g. Titanic" value={movieData.title} onChange={(e)=>{
                                 
                                     setMovieData({...movieData,title:e.target.value})
                                 }}/>
@@ -90,7 +107,7 @@ const MovieForm = () => {
                         <div className="field">
                             <label className="label has-text-white">Genre</label>
                             <div className="control">
-                                <input className="input has-text-white" placeholder="e.g. Action" value={movieData.genre} onChange={(e)=>{
+                                <input className="input" placeholder="e.g. Action" value={movieData.genre} onChange={(e)=>{
                                     
                                     setMovieData({...movieData,genre:e.target.value})
                                 }}/>
@@ -100,49 +117,31 @@ const MovieForm = () => {
                         <div className="field">
                             <label className="label has-text-white">Type</label>
                             <div className="control">
-                                <input className="input has-text-white" placeholder="e.g. Movie/Tv-Show" value={movieData.type} onChange={(e)=>{
-                                
+                                <select className="select is-medium" value={movieData.type} onChange={(e)=>{
+
                                     setMovieData({...movieData,type:e.target.value})
-                                }}/>
+                                }}>
+                                    <option value="movies">Movies</option>
+                                    <option value="tv-shows">TV Shows</option>
+                                </select>
                             </div>
                         </div>
 
                         <div className="field">
                             <label className="label has-text-white">Rating</label>
                             <div className="control">
-                                <input className="input has-text-white" placeholder="e.g. PG-13" value={movieData.rating} onChange={(e)=>{
+                                <input className="input" placeholder="e.g. PG-13" value={movieData.rating} onChange={(e)=>{
                                     
                                     setMovieData({...movieData,rating:e.target.value})
                                 }}/>
                             </div>
                         </div>
-                    </div>
-                    
-                    <div className="column">
-                        {/* <div class="field">
-                            <label class="label has-text-white">Rental Price</label>
-                            <div class="control">
-                                <input class="input has-text-white" placeholder="e.g. $5.99" value={movie.rentalPrice} onChange={(e)=>{
-                                    
-                                    setMovie({...movie,rentalPrice:e.target.value})
-                                }}/>
-                            </div>
-                        </div>
 
-                        <div class="field">
-                            <label class="label has-text-white">Purchase Price</label>
-                            <div class="control">
-                                <input class="input has-text-white" placeholder="e.g. $7.99" value={movie.purchasePrice} onChange={(e)=>{
-                                    
-                                    setMovie({...movie,purchasePrice:e.target.value})
-                                }}/>
-                            </div>
-                        </div> */}
-
+                        {/* copied second column */}
                         <div className="field">
                             <label className="label has-text-white">Length(xh xxm)</label>
                             <div className="control">
-                                <input className="input has-text-white" placeholder="e.g. 1hr 30mins" value={movieData.length} onChange={(e)=>{
+                                <input className="input" placeholder="e.g. 1hr 30mins" value={movieData.length} onChange={(e)=>{
                                     
                                     setMovieData({...movieData,length:e.target.value})
                                 }}/>
@@ -152,7 +151,7 @@ const MovieForm = () => {
                         <div className="field">
                             <label className="label has-text-white">Release</label>
                             <div className="control">
-                                <input className="input has-text-white" placeholder="e.g. 2021" value={movieData.release} onChange={(e)=>{
+                                <input type="date" className="input" value={movieData.release} onChange={(e)=>{
                                     
                                     setMovieData({...movieData,release:e.target.value})
                                 }}/>
@@ -160,27 +159,62 @@ const MovieForm = () => {
                         </div>
 
                         <div className="field">
+                            <label className="label has-text-white">Rental Price</label>
+                            <div className="control">
+                                <input type="number" className="input" placeholder="0.00" value={movieData.rentalPrice} onChange={(e)=>{
+                                    
+                                    setMovieData({...movieData,rentalPrice:e.target.value})
+                                }}/>
+                            </div>
+                        </div>
+
+                        <div className="field">
+                            <label className="label has-text-white">Purchase Price</label>
+                            <div className="control">
+                                <input type="number" className="input" placeholder="0.00" value={movieData.purchasePrice} onChange={(e)=>{
+                                    
+                                    setMovieData({...movieData,purchasePrice:e.target.value})
+                                }}/>
+                            </div>
+                        </div>
+
+                        <div className="field">
                             <label className="label has-text-white">Poster Image</label>
                             <div className="control">
-                                {/* <input className="input has-text-white" type="file" value={movieData.imgPath} onChange={(e)=>{
+                                <input className="input" type="file" onChange={(e)=>{
                                     
-                                    setMovieData({...movieData,imgPath:e.target.value})
-                                }}/> */}
+                                    setMovieData({...movieData,imgPath:e.target})
+                                }}/>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label className="has-text-white">Featured:</label>
+                            <label className="mx-4 has-text-white">Yes</label>
+                            <input className="mx-4" type="radio" name="featured" value={true} onChange={(e)=>{
+                                    
+                                    setMovieData({...movieData,isFeatured:e.target.value})
+                                }}/>
+                            <label className="mx-4 has-text-white">No</label>
+                            <input className="mx-4" type="radio" name="featured" value={false} onChange={(e)=>{
+                                    
+                                    setMovieData({...movieData,isFeatured:e.target.value})
+                                }}/>
+                        </div>
+                    
+                         <div class="field mt-4">
+                            <label class="label has-text-white">Overview</label>
+                            <div class="control">
+                                <textarea rows="10"cols="108" value={movieData.overview} onChange={(e)=>{
+                                    
+                                    setMovieData({...movieData,overview:e.target.value})
+                                }}/>
                             </div>
                         </div>
                     
-                        {/* <div class="field">
-                            <label class="label has-text-white">Overview</label>
-                            <div class="control">
-                                <textarea rows="10"cols="108" value={movie.overview} onChange={(e)=>{
-                                    
-                                    setMovie({...movie,overview:e.target.value})
-                                }}/>
-                            </div>
-                        </div> */}
-                    
                         <button className="button has-text-white" type="submit">Save</button>
                     </div>
+                    
                 </div>
             </form>
             

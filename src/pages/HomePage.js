@@ -7,6 +7,7 @@ import MovieRowContainer from '../components/MovieRowContainer'
 import Footer from '../components/Footer'
 import Genres from '../components/Genres'
 import FeaturedContainer from '../components/FeaturedTitles'
+import SearchTitles from '../components/SearchTitles'
 
 // CSS
 
@@ -39,6 +40,9 @@ const HomePage = () => {
                 <div id="page-container">
                 <section id="hero-section">
                     <Hero image={AvengersBanner}/>
+                </section>
+                <section id="title-search">
+                    <SearchTitles placeholder="Search"/>
                 </section>
                 <section id="movie-genres">
                     <Genres />

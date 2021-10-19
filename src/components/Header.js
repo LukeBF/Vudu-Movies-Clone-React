@@ -40,7 +40,7 @@ const Header = () => {
                     <div className="navbar-menu">
                         <div className="navbar-end">
                             <a class="navbar-item">
-                                <Link to="/login">
+                                <Link to="/users/login">
                                     Sign In
                                 </Link>
                             </a>

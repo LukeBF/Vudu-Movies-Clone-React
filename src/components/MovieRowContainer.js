@@ -17,7 +17,7 @@ const MovieRowContainer = ({heading}) => {
                 <h2>{heading}</h2>
                 <div className="grid grid-col-6 grid-column-gap grid-row-gap">
                     {movies.map((movie)=>(
-                        <MovieCard key={movie.id} id={movie.id} poster={movie.imgPath} title={movie.title} genre={movie.genre} rating={movie.rating} length={movie.length} release={movie.release}/>
+                        <MovieCard key={movie.id} id={movie.id} title={movie.title} genre={movie.genre} rating={movie.rating} length={movie.length} release={movie.release} featured={movie.isFeatured} poster={movie.imgPath}/>
                     ))}
                 </div>
             </div>

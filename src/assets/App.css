@@ -251,3 +251,21 @@ header a {
   pointer-events: none;
 } */
 /* Footer */
+
+.box:not(:last-child) {
+  margin-bottom: 0;
+}
+
+/* Search */
+.search-container {
+  width: 100%;
+}
+
+/* Admin Panel */
+.admin-titles > a {
+  display: block;
+}
+
+.movie-form-container input {
+  background-color: white;
+}

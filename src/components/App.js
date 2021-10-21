@@ -1,12 +1,17 @@
 import React,{useState,useEffect} from 'react'
 
 // Components
+
+// Pages
+import DetailsPage from '../pages/DetailsPage'
+import SignupPage from '../pages/SignupPage'
 import HomePage from '../pages/HomePage'
 import MoviesPage from '../pages/MoviesPage'
 import ShowsPage from '../pages/ShowsPage'
 import LogInPage from '../pages/LogInPage'
 import AdminPage from '../pages/AdminPage'
 import CreateMoviePage from '../pages/CreateMoviePage'
+
 // import FeaturedContainer from './FeaturedTitles'
 
 // bulma css
@@ -29,7 +34,6 @@ import {
   Route,
   // Link
 } from "react-router-dom";
-import SignupPage from '../pages/SignupPage'
 
 
 const App = () => {
@@ -48,7 +52,7 @@ const App = () => {
   // console.log(movies)
 
   useEffect(()=>{
-    fetch("http://localhost:3000/movies")
+    fetch("http://localhost:5000/movies")
     
     .then(res=>res.json())
     .then(data=>{
@@ -86,6 +90,9 @@ const App = () => {
               </Route>
               <Route path="/register-movie">
                   <CreateMoviePage />
+              </Route>
+              <Route path="/card/details">
+                  <DetailsPage />
               </Route>
           </Switch>
         </TableDataContext.Provider>

@@ -1,4 +1,4 @@
-import React,{useContext,useEffect} from 'react'
+import React,{useState,useContext,useEffect} from 'react'
 
 // Components
 import Header from '../components/Header'
@@ -22,6 +22,7 @@ import MovieContext from '../context/MovieContext'
 const HomePage = () => {
 
     const {movies,setMovies} = useContext(MovieContext)
+    const [banner,setBanner] = useState([])
 
     useEffect(()=>{
         fetch("http://localhost:3000/movies/")
@@ -30,16 +31,25 @@ const HomePage = () => {
         .then(data=>{
             
         // console.log(data)
-        setMovies(data.data)    
+        setMovies(data.data)
+        setBanner(data.data[Math.floor(Math.random() * data.data.length - 1)])    
         }) 
     },[]);
+    
+    //console.log(banner)
 
     return (
         <>
+            {/* Nav */}
             <Header />
                 <div id="page-container">
-                <section id="hero-section">
+                {/* Hero Banner */}
+                <section id="hero-section" className="banner">
                     <Hero image={AvengersBanner}/>
+                    {/* <div className="hero-contents">
+                        <h1></h1>
+                        <Hero image={AvengersBanner}/>
+                    </div> */}
                 </section>
                 <section id="title-search">
                     <SearchTitles placeholder="Search"/>

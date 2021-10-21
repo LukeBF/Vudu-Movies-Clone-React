@@ -8,7 +8,7 @@ const FeaturedContainer = ({heading}) => {
     const [movies, setMovies] = useState([]);
 
     useEffect(()=>{
-        fetch("http://localhost:3000/movies/featured?isFeatured=true")
+        fetch("http://localhost:5000/movies/featured?isFeatured=true")
         
         .then(res=>res.json())
         .then(data=>{

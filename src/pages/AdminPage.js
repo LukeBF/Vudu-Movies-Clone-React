@@ -6,10 +6,12 @@ import {Link} from 'react-router-dom'
 import AdminHeader from '../components/AdminHeader'
 import MovieForm from '../components/MovieForm'
 import MovieTable from '../components/MovieTable'
+
+
 // import AdminSidebar from '../components/AdminSidebar'
 // import Logo from "../assets/img/logos/logoipsum-logo-34.svg"
 
-const AdminPage = () => {
+const AdminPage = (props) => {
 
 
     return (
@@ -17,7 +19,7 @@ const AdminPage = () => {
             <AdminHeader heading="Admin Panel"/>
 
             <div class="columns">
-                <div class="column is-one-fifth has-background-white has-text-centered pt-6">
+                <div className="column is-one-fifth has-background-white has-text-centered pt-6">
                     <h2 className="title is-4">Dashboard</h2>
 
                     <div className="admin-titles">
@@ -62,10 +64,10 @@ const AdminPage = () => {
                         </div> */}
                     
                 </div>
-                <div class="column px-6 py-6 hide">
+                <div class="column px-6 py-6">
                     <MovieForm />
                 </div>
-                <div class="column px-6 py-6">
+                <div class="column px-6 py-6 hide">
                     <MovieTable />
                 </div>
             </div>

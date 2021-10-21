@@ -29,6 +29,7 @@ const MovieForm = () => {
     })
 
     const formHandler = (e) => {
+        
         // const newData = {...movieData}
         // newData[e.target.id] = e.target.value
         // setMovieData(newData)
@@ -37,15 +38,17 @@ const MovieForm = () => {
 
        e.preventDefault();
 
+       //alert("test")
 
         const formData = new FormData();
-       // const fileField = document.querySelector('input[type="file"]');
+    //    const fileField = document.querySelector('input[type="file"]');
 
         formData.append('title', movieData.title);
         formData.append('genre', movieData.genre);
         formData.append('rating', movieData.rating);
         formData.append('length', movieData.length);
         formData.append('imgPath', movieData.imgPath.files[0]);
+        // formData.append('imgPath', fileField.files[0])
         formData.append('isFeatured', movieData.isFeatured);
         formData.append('rentalPrice', movieData.rentalPrice);
         formData.append('purchasePrice', movieData.purchasePrice);
@@ -54,10 +57,10 @@ const MovieForm = () => {
         formData.append('overview', movieData.overview);
 
 
-
+        console.log(formData)
 
     
-       fetch("http://localhost:3000/movies",{
+       fetch("http://localhost:5000/movies",{
             method:"POST",
      
               body:formData
@@ -122,7 +125,7 @@ const MovieForm = () => {
                                     setMovieData({...movieData,type:e.target.value})
                                 }}>
                                     <option value="movies">Movies</option>
-                                    <option value="tv-shows">TV Shows</option>
+                                    <option value="tv-shows">TV Shows</option> 
                                 </select>
                             </div>
                         </div>

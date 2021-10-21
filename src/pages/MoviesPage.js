@@ -15,8 +15,8 @@ const MoviesPage = () => {
         fetch("http://localhost:3000/movies/allmovies?type=movies")
         
         .then(res=>res.json())
-        .then(data=>{
-        setMovies(data.data)    
+        .then(json=>{
+        setMovies(json.data)    
         }) 
 
         

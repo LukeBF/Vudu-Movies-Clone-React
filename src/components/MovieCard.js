@@ -1,20 +1,31 @@
-import React from 'react'
+import React,{useContext} from 'react'
+import { Link } from 'react-router-dom'
+import MovieRowContainer from './MovieRowContainer'
+import MovieContext from '../context/MovieContext'
 
 // import Avengers from '../img/poster/Avengers.jpg'
 // import DefaultPoster from '../img/poster/default-movie.jpg'
 
 const MovieCard = (props) => {
 
+    const {movies,setMovies} = useContext(MovieContext) 
+    console.log(movies)
+
+    //const baseURL = "https://movies-dynamic-assets.s3.us-east-2.amazonaws.com/"
+
     // const defaultPoster = require(`../img/poster/default-movie.jpg`).default
-    const moviePoster = require(`../assets/img/poster/${props.poster}`).default
+    // const moviePoster = require(`../assets/img/poster/${props.poster}`).default
+    // const moviePoster = require(`../assets/img/poster/${props.poster}`).default
+    // {console.log(props.src)}
 
     return (
         <div  className="movie-card">
             <div className="card-poster">
-                <a href = "/"> 
+                <Link to = "/card/details"> 
                     {/* <img src={DefaultPoster} alt="default poster image"/>    */}
-                    <img src={moviePoster} alt={`props.title`}poster image/>
-                </a>
+                    {/* <img src={moviePoster} alt={`props.title`}poster image/> */}
+                    <img src={props.poster} alt={props.title}/>
+                </Link>
             </div>
             
             <div className="card-content">

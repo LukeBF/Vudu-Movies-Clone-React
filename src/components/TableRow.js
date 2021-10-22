@@ -9,7 +9,14 @@ import {Link} from 'react-router-dom'
 const TableRow = (props) => {
 
     const {movies,setMovies} = useContext(MovieContext)
-    console.log(movies)
+    
+    const updateCard = () => {
+        alert("Edit")
+    }
+
+    const deleteCard = () => {
+        alert("Delete")
+    }
 
     return (
         <>
@@ -21,12 +28,19 @@ const TableRow = (props) => {
                 <td>{props.length}</td>
                 <td>{props.release}</td>
                 {/* <td>{props.isFeatured}</td> */}
-                <td className="is-flex is-justify-content-center"><img src="https://movies-dynamic-assets.s3.us-east-2.amazonaws.com/spider.jpg"></img></td>
+                <td className="is-flex is-justify-content-center"><img src={props.poster}></img></td>
                 <td className="mx-2 is-size-5">
                     <Link to="">
-                        <FaEdit />
+                        <FaEdit onClick={(e)=>{
+                                    
+                            updateCard()
+                        }}/>
                     </Link>
-                    <Link to=""><span className="mx-2 is-size-5"><FaTrashAlt /></span></Link>
+                    <Link to=""><span className="mx-2 is-size-5"><FaTrashAlt onClick={(e)=>{
+                                    
+                        deleteCard()
+                    }}/></span>
+                    </Link>
                 </td>
             </tr>
         </>

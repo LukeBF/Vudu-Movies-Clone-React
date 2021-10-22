@@ -2,15 +2,15 @@ import React,{useContext} from 'react'
 import Header from '../components/Header'
 import MovieContext from '../context/MovieContext'
 
-const DetailsPage = () => {
+const DetailsPage = (props) => {
 
-    const {movies,setMovies} = useContext(MovieContext) 
+    const {movies} = useContext(MovieContext) 
     console.log(movies)
 
     return (
         <div>
             <Header />
-            <section class="section is-medium has-text-white">
+            <section className="section is-medium has-text-white">
                 <figure className="image">
                     <img />
                 </figure>

@@ -64,10 +64,10 @@ const AdminPage = (props) => {
                         </div> */}
                     
                 </div>
-                <div class="column px-6 py-6">
+                <div class="column px-6 py-6 hide">
                     <MovieForm />
                 </div>
-                <div class="column px-6 py-6 hide">
+                <div class="column px-6 py-6">
                     <MovieTable />
                 </div>
             </div>

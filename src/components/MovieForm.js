@@ -205,9 +205,9 @@ const MovieForm = () => {
                                 }}/>
                         </div>
                     
-                         <div class="field mt-4">
-                            <label class="label has-text-white">Overview</label>
-                            <div class="control">
+                         <div className="field mt-4">
+                            <label className="label has-text-white">Overview</label>
+                            <div className="control">
                                 <textarea rows="10"cols="108" value={movieData.overview} onChange={(e)=>{
                                     
                                     setMovieData({...movieData,overview:e.target.value})

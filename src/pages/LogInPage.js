@@ -8,21 +8,9 @@ const LogIn = () => {
 
 
     return (
-        <>
-            {/* <Header /> */}
-            <div className="login-bg hero is-fullheight has-text-white">
-                <div id="page-container">
-                    <LoginForm />
-                </div>
-            </div>
-        </>
-        // <div className="login-bg">
-        //     <div id="page-container">
-        //         <Header />
-        //         <LogInContainer />
-        //     </div>
-            
-        // </div>
+        <div>
+            <LoginForm />
+        </div>
     )
 }
 

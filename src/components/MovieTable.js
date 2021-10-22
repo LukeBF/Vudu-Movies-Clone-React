@@ -35,7 +35,7 @@ const MovieTable = () => {
                 </thead>
 
                 <tbody>
-                    {movies.map((movie,index)=>(
+                    {movies.map((movie)=>(
                         <TableRow key={movie.id} id={movie.id} poster={movie.imgPath} title={movie.title} genre={movie.genre} rating={movie.rating} length={movie.length} release={movie.release} edit={FaEdit} delete={FaTrashAlt}/>
                     ))}
                     {/* <tr>

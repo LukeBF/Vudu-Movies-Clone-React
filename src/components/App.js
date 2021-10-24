@@ -25,6 +25,7 @@ import '../assets/Utilities.css'
 //Context
 import MovieContext from '../context/MovieContext'
 import TableDataContext from '../context/TableDataContext'
+import DisplayContext from '../context/displayContext'
 // import FeaturedContext from '../context/FeaturedContext'
 
 // Router
@@ -38,6 +39,7 @@ import {
 
 const App = () => {
 
+  const [display,setDisplay] = useState(true)
   const [movies, setMovies] = useState([]);
   const [rows, setRows] = useState([
     {
@@ -69,6 +71,7 @@ const App = () => {
       <Router>
         <MovieContext.Provider value={{movies,setMovies}}>
         <TableDataContext.Provider value={{rows,setRows}}>
+        <DisplayContext.Provider value={{display,setDisplay}}>
           <Switch>
               <Route exact path="/">
                     <HomePage />  
@@ -95,6 +98,7 @@ const App = () => {
                   <DetailsPage />
               </Route>
           </Switch>
+        </DisplayContext.Provider>
         </TableDataContext.Provider>
         </MovieContext.Provider>
       </Router>

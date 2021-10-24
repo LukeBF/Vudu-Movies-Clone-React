@@ -62,21 +62,6 @@ const HomePage = () => {
                                     <img className="banner-image" src={SquidGameBanner}/>
                                 </SplideSlide>
                             </Splide>
-                            {/* <p class="title">
-                            Medium hero
-                            </p> */}
-                            {/* <p class="subtitle">
-                            Medium subtitle
-                            </p> */}
-                        
-                    {/* <Splide>
-                        <SplideSlide>
-                            <img src={AvengersBanner} alt="Avengers"/>
-                        </SplideSlide>
-                        <SplideSlide>
-                            <img src={SquidGameBanner} alt="Squid Game"/>
-                        </SplideSlide>
-                    </Splide> */}
                     </section>
                     {/* Start Hero Carousel */}
         

@@ -1,15 +1,23 @@
 import React,{useState,useContext} from 'react'
 
-import AdminHeader from '../components/AdminHeader'
+
+
+
+// import AdminHeader from '../components/AdminHeader'
 
 // import MovieContext from '../context/MovieContext'
- import { useHistory } from 'react-router'
+//  import { useHistory } from 'react-router'
+
+ import {Link} from 'react-router-dom'
 
 // const movieService = require("../services/MovieService.js")
 
+//Icons
+import { AiOutlineEye } from "react-icons/ai";
+
 const MovieForm = () => {
 
-    const history = useHistory()
+    //const history = useHistory()
 
     // const {movies,setMovies} = useContext(MovieContext)
 
@@ -55,15 +63,12 @@ const MovieForm = () => {
         formData.append('type', movieData.type);
         formData.append('release', movieData.release);
         formData.append('overview', movieData.overview);
+        //console.log(formData)
 
-
-        console.log(formData)
-
-    
        fetch("http://localhost:5000/movies",{
             method:"POST",
      
-              body:formData
+            body:formData
              
        })
 
@@ -74,7 +79,8 @@ const MovieForm = () => {
             // setMovieData([...movieData, json.data])
             // console.log(movieData)
             // console.log(json)
-            history.push("/")
+            
+            //history.push("/")
         })
         .catch(err=>{
             console.log(`Error: ${err}`)
@@ -84,19 +90,10 @@ const MovieForm = () => {
 
     return (
         <>
-            {/* <AdminHeader /> */}
-           
-            {/* <section className="hero is-black">
-                    <div className="hero-body">
-                        <p className="title">
-                            Create Movie
-                        </p>
-                    </div>
-            </section> */}
-
             <form className="container" onSubmit={formHandler}>
                 <div className="movie-form-container columns">
                     <div className="column">
+                        
                         <div className="field">
                             <label className="label has-text-white">Title</label>
                             <div className="control">

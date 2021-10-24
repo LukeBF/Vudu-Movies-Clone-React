@@ -13,7 +13,7 @@ const ShowsPage = () => {
     const {movies,setMovies} = useContext(MovieContext)
 
     useEffect(()=>{
-        fetch("http://localhost:3000/movies/tvshows?type=tv-shows")
+        fetch("http://localhost:5000/movies/tvshows?type=tv-shows")
         
         .then(res=>res.json())
         .then(data=>{

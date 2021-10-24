@@ -2,19 +2,13 @@ import React, { useContext } from 'react'
 
 //Components
 import MovieCard from './MovieCard'
-// import HomePage from '../pages/HomePage'
 
 //Context
 import MovieContext from '../context/MovieContext'
 
 const MovieRowContainer = ({heading}) => {
 
-    const {movies} = useContext(MovieContext)
-
-    //console.log(movies)
-
-    // const baseURL = "https://movies-dynamic-assets.s3.us-east-2.amazonaws.com/spider.jpg"
-     
+    const {movies} = useContext(MovieContext) 
 
     return (
         <div>

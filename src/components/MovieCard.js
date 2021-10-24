@@ -4,7 +4,7 @@ import MovieRowContainer from './MovieRowContainer'
 import MovieContext from '../context/MovieContext'
 
 // import Avengers from '../img/poster/Avengers.jpg'
-// import DefaultPoster from '../img/poster/default-movie.jpg'
+//import DefaultPoster from '../img/poster/default-movie.jpg'
 
 const MovieCard = (props) => {
 
@@ -13,7 +13,7 @@ const MovieCard = (props) => {
 
     //const baseURL = "https://movies-dynamic-assets.s3.us-east-2.amazonaws.com/"
 
-    // const defaultPoster = require(`../img/poster/default-movie.jpg`).default
+    //const defaultPoster = require(`../img/poster/default-movie.jpg`).default
     // const moviePoster = require(`../assets/img/poster/${props.poster}`).default
     // const moviePoster = require(`../assets/img/poster/${props.poster}`).default
     // {console.log(props.src)}

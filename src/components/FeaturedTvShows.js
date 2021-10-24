@@ -1,14 +1,14 @@
-import React, {useState,useEffect} from 'react'
+import React,{useState,useEffect} from 'react'
 
 //Components
 import MovieCard from './MovieCard'
 
-const FeaturedContainer = ({heading}) => {
+const FeaturedTvShows = ({heading}) => {
 
     const [movies, setMovies] = useState([]);
 
     useEffect(()=>{
-        fetch("http://localhost:5000/movies/featured?isFeatured=true")
+        fetch("http://localhost:5000/movies/featured/tvshows?isFeatured=true")
         
         .then(res=>res.json())
         .then(data=>{
@@ -33,4 +33,4 @@ const FeaturedContainer = ({heading}) => {
     )
 }
 
-export default FeaturedContainer
+export default FeaturedTvShows

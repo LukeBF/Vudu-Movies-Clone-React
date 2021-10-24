@@ -29,7 +29,7 @@ const MovieTable = () => {
     const {rows, setRows}= useContext(TableDataContext)
 
     return (
-        <div>
+        <div className="table-container">
             {/* <Link to="/register-movie">
                 <button className="button is-small mb-4 has-text-white">
                     <FaPlusCircle className="mr-2"/>Add Movie

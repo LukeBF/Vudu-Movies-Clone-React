@@ -230,8 +230,6 @@ header a {
   margin: 0 auto;
 }
 
-/* Footer */
-
 .box:not(:last-child) {
   margin-bottom: 0;
 }
@@ -258,6 +256,10 @@ header a {
 
 .movie-form-container input {
   background-color: white;
+}
+
+.table-container {
+  height: 100vh;
 }
 
 /* Details Page */

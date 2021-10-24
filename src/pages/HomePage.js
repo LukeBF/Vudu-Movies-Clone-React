@@ -9,7 +9,8 @@ import Hero from '../components/Hero'
 import MovieRowContainer from '../components/MovieRowContainer'
 import Footer from '../components/Footer'
 import Genres from '../components/Genres'
-import FeaturedContainer from '../components/FeaturedTitles'
+import FeaturedMovies from '../components/FeaturedMovies'
+import FeaturedTvShows from '../components/FeaturedTvShows';
 import SearchTitles from '../components/SearchTitles'
 
 // CSS
@@ -77,8 +78,9 @@ const HomePage = () => {
                         <Genres />
                     </section>
                     <section id="movie-list-section">
-                        <FeaturedContainer heading="Featured"/>
-                        <MovieRowContainer heading="Browse All Titles"/>
+                        <FeaturedMovies heading="Featured Movies"/>
+                        <FeaturedTvShows heading="Featured TV-Shows"/>
+                        <MovieRowContainer heading="Browse All"/>
                     </section>
                     <Footer />
             </div>

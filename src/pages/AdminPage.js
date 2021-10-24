@@ -8,6 +8,7 @@ import DisplayContext from '../context/displayContext';
 import {Link} from 'react-router-dom'
 
 // Components
+import Header from '../components/Header';
 import AdminHeader from '../components/AdminHeader'
 import MovieForm from '../components/MovieForm'
 import MovieTable from '../components/MovieTable'
@@ -28,97 +29,88 @@ const AdminPage = (props) => {
     return (
         <>
             {/* <AdminHeader heading="Admin Panel"/> */}
-           
-                <div class="columns">
-                    {/* Left panel to navigate the different components*/}
-                    <div className="column column-lp is-one-fifth has-background-white has-text-centered pt-6">
-                        <a href="">
-                            <h2 className="title is-3">Dashboard</h2>
+            <Header />
+            <div class="columns">
+            {/* Left panel to navigate the different components*/}
+                <div className="column column-lp is-one-fifth has-background-white has-text-centered pt-6">
+                    <a href="">
+                        <h2 className="title is-3">Dashboard</h2>
+                    </a>
+                <div className="lp-menu">
+                    <a href="">
+                        <div className="admin-titles mt-6 is-flex">
+                            <span><FaUserFriends className="mr-2 lp-icon is-size-4"/></span><h2 className="title is-5 has-text-left">Customers</h2>
+                        </div>
+                    </a>
+
+                    <a href="">
+                        <div className="admin-titles mt-6 is-flex">
+                            <span><BiMoviePlay className="mr-2 lp-icon is-size-4"/></span><h2 className="title is-5 has-text-left">Movies</h2>
+                        </div>
+                    </a>
+
+                    <a href="">
+                        <div className="admin-titles mt-6 is-flex">
+                            <span><RiMovie2Fill className="mr-2 lp-icon is-size-4"/></span><h2 className="title is-5 has-text-left">TV-Shows</h2>
+                        </div>
+                    </a>
+
+                    {/* <a href="">
+                        <div className="admin-titles mt-6">
+                            <span><BiMoviePlay className="mr-2 lp-icon"/></span><h2 className="title is-5 has-text-left">Movies</h2>
+                        </div>
+                    </a>
+
+                    <div className="admin-titles mt-6">
+                        <a>
+                            <span><RiMovie2Fill className="mr-2 lp-icon"/></span><h2 className="title is-5 has-text-left">TV-Shows</h2>
                         </a>
-                        
-                        <div className="lp-menu">
-                            <a href="">
-                                <div className="admin-titles mt-6">
-                                    <h2 className="title is-5 has-text-left"><FaUserFriends className="mr-2 lp-icon"/>Customers</h2>
-                                </div>
-                            </a>
+                    </div>  */}
+                </div>                    
+            </div>
+            {/* Main area to display data and forms */}
 
-                            <a href="">
-                                <div className="admin-titles mt-6">
-                                    <h2 className="title is-5 has-text-left"><BiMoviePlay className="mr-2 lp-icon"/>Movies</h2>
-                                </div>
-                            </a>
-
-                            <div className="admin-titles mt-6">
-                                <a>
-                                    <h2 className="title is-5 has-text-left"><RiMovie2Fill className="mr-2 lp-icon"/>TV-Shows</h2>
-                                </a>
-                            </div> 
-                        </div>                    
+            {
+                display?
+                <div className="column px-6 py-6">
+                    <div class="navbar-end">
+                        <div class="navbar-item">
+                            <div class="field is-grouped">
+                                <button className="button control mt-2 mr-2 has-background-white" onClick={()=>{
+                                    setDisplay(!display)
+                                }}>
+                                    <FaPlusCircle className="mr-2"/>
+                                    <span>Add Movie</span> 
+                                </button>
+                            </div>
+                        </div>
                     </div>
-                    {/* Main area to display data and forms */}
-                
-                    {/* <AdminHeader /> */}
-                    {/* <nav class="navbar is-transparent">
-                        <div class="navbar-brand">
-                            <div class="navbar-burger" data-target="navbarExampleTransparentExample">
-                            <span></span>
-                            <span></span>
-                            <span></span>
+                    <MovieTable />
+                </div>
+                :    
+                <div className="column px-6 py-6">
+                    <div class="navbar-end">
+                        <div class="navbar-item">
+                            <div class="field is-grouped">
+                                <button className="button control mt-2 mr-2 has-background-white" onClick={()=>{
+                                    setDisplay(!display)
+                                }}>
+                                    <AiOutlineEye className="mr-2"/>
+                                    <span>View All</span> 
+                                </button>
                             </div>
                         </div>
+                    </div>
+                    <MovieForm />
+                </div>
+                }
 
-                        <div id="navbarExampleTransparentExample" class="navbar-menu">
-                            <div class="navbar-start">
-
-                            </div> */}
-
-                            
-                        {/* </div>
-                    </nav> */}
-
-
-                    {
-                        display?
-                        <div className="column px-6 py-6">
-                            <div class="navbar-end">
-                                <div class="navbar-item">
-                                    <div class="field is-grouped">
-                                        <button className="button control mt-2 mr-2 has-background-white" onClick={()=>{
-                                            setDisplay(!display)
-                                        }}>
-                                            <FaPlusCircle className="mr-2"/>
-                                            <span>Add Movie</span> 
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                            <MovieTable />
-                        </div>
-                        :    
-                        <div className="column px-6 py-6">
-                            <div class="navbar-end">
-                                <div class="navbar-item">
-                                    <div class="field is-grouped">
-                                        <button className="button control mt-2 mr-2 has-background-white" onClick={()=>{
-                                            setDisplay(!display)
-                                        }}>
-                                            <AiOutlineEye className="mr-2"/>
-                                            <span>View All</span> 
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                            <MovieForm />
-                        </div>
-                    }
-
-                    {/* <div className="column px-6 py-6 hide">
-                        <MovieForm />
-                    </div> */}
-                    {/* // <div className="column px-6 py-6">
-                    //     <MovieTable />
-                    // </div> */}
+                {/* <div className="column px-6 py-6 hide">
+                    <MovieForm />
+                </div> */}
+                {/* // <div className="column px-6 py-6">
+                //     <MovieTable />
+                // </div> */}
                 
             </div>
         </>

@@ -94,7 +94,7 @@ const App = () => {
               <Route path="/register-movie">
                   <CreateMoviePage />
               </Route>
-              <Route path="/card/details">
+              <Route path="/card/details/:id">
                   <DetailsPage />
               </Route>
           </Switch>

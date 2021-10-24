@@ -21,7 +21,7 @@ const MovieCard = (props) => {
     return (
         <div  className="movie-card">
             <div className="card-poster">
-                <Link to = "/card/details"> 
+                <Link to = {`/card/details/${props.id}`}> 
                     {/* <img src={DefaultPoster} alt="default poster image"/>    */}
                     {/* <img src={moviePoster} alt={`props.title`}poster image/> */}
                     <img src={props.poster} alt={props.title}/>

@@ -6,13 +6,12 @@ import TableRow from './TableRow';
 //Context
 import MovieContext from '../context/MovieContext';
 import TableDataContext from '../context/TableDataContext';
+import DisplayContext from '../context/displayContext';
 
 //Icons
 import { FaEdit,FaTrashAlt,FaPlusCircle } from "react-icons/fa"; 
 
 //Router
-import {Link} from 'react-router-dom'
-import DisplayContext from '../context/displayContext';
 // import { getByDisplayValue } from '@testing-library/dom';
 
 
@@ -29,7 +28,7 @@ const MovieTable = () => {
     const {rows, setRows}= useContext(TableDataContext)
 
     return (
-        <div className="table-container">
+        <div className="container mr-5">
             {/* <Link to="/register-movie">
                 <button className="button is-small mb-4 has-text-white">
                     <FaPlusCircle className="mr-2"/>Add Movie
@@ -38,7 +37,7 @@ const MovieTable = () => {
 
 
          
-            <table className="table is-fullwidth">
+            <table className="table">
                 <thead>
                     <tr>
                         {/* <th><h3 className="title is-5">Number</h3></th> */}
@@ -56,7 +55,7 @@ const MovieTable = () => {
 
                 <tbody>
                     {movies.map((movie)=>(
-                        <TableRow key={movie.id} id={movie.id} poster={movie.imgPath} title={movie.title} genre={movie.genre} rating={movie.rating} length={movie.length} release={movie.release} edit={FaEdit} delete={FaTrashAlt}/>
+                        <TableRow key={movie.id} id={movie._id} poster={movie.imgPath} title={movie.title} genre={movie.genre} rating={movie.rating} length={movie.length} release={movie.release} edit={FaEdit} delete={FaTrashAlt}/>
                     ))}
                 </tbody>
             </table>

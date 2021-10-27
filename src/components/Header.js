@@ -1,16 +1,21 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 
+// Icons
+import { BiUserCircle } from "react-icons/bi";
+
+
 const Header = () => {
 
+    let user = null;
 
     return (
         <header>
-            <nav className="navbar">
+            <nav className="navbar is-fixed-top">
                 <div className="navbar-brand">
-                <a className="navbar-item" href="https://bulma.io">
-                    {/* <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28"/> */}
-                </a>
+                    <a className="navbar-item" href="https://bulma.io">
+                        {/* <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28"/> */}
+                    </a>
                     <a className="navbar-burger" id="burger">
                         <span aria-hidden="true"></span>
                         <span aria-hidden="true"></span>
@@ -37,13 +42,43 @@ const Header = () => {
                             </Link>
                         </a>
                     </div>
+                    {/* Navbar end */}
                     <div className="navbar-menu">
                         <div className="navbar-end">
-                            <a className="navbar-item">
-                                <Link to="/users/login">
-                                    Sign In
-                                </Link>
-                            </a>
+
+                            {/* Ternary operator */}
+                            {user ?
+                                <>
+                                    {/* This block of code executes when the user is logged in */}
+                                    <a className="navbar-item">
+                                        <span className="is-size-3 mr-2 has-text-white is-flex is-justify-content-center is-align-items-center">
+                                            <BiUserCircle />
+                                        </span>
+                                        <Link to="/users/login">
+                                             Logout
+                                         </Link>
+                                     </a>
+                                </>
+                                // <a className="navbar-item">
+                                //     <Link to="/users/login">
+                                //         Sign In
+                                //     </Link>
+                                // </a>
+                            : 
+                                <>
+                                    <a className="navbar-item is-flex">
+                                        {/* Direct the visitor to the login page */}
+                                        <Link to="/users/login">
+                                             Sign in
+                                         </Link>
+                                     </a>
+                                </>
+                                // <a className="navbar-item">
+                                //     <Link to="">
+                                //         Logout
+                                //     </Link>
+                                // </a>
+                            }
                             <a className="navbar-item">
                                 <Link to="/admin">
                                     Admin

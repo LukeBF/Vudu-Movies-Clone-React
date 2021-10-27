@@ -1,21 +1,23 @@
 import React,{useState,useContext} from 'react'
 
+//Components
+import Header from '../components/Header';
+import MovieFormButton from './MovieFormButton';
+import AdminLeftPanel from './AdminLeftPanel';
 
-
-
-// import AdminHeader from '../components/AdminHeader'
-
-// import MovieContext from '../context/MovieContext'
-//  import { useHistory } from 'react-router'
+//Context
+import MovieContext from '../context/MovieContext';
+import FormUpdateContext from '../context/FormUpdateContext';
+import DisplayContext from '../context/displayContext';
 
  import {Link} from 'react-router-dom'
-
-// const movieService = require("../services/MovieService.js")
 
 //Icons
 import { AiOutlineEye } from "react-icons/ai";
 
 const MovieForm = () => {
+
+    const [display,setDisplay] = useState(true);
 
     //const history = useHistory()
 
@@ -67,16 +69,14 @@ const MovieForm = () => {
 
        fetch("http://localhost:5000/movies",{
             method:"POST",
-     
             body:formData
-             
        })
 
        .then(res=>res.json())
        .then(json=>{
+            
             alert(json.message)
-           
-            // setMovieData([...movieData, json.data])
+            setMovieData([...movieData, json.data])
             // console.log(movieData)
             // console.log(json)
             
@@ -85,16 +85,16 @@ const MovieForm = () => {
         .catch(err=>{
             console.log(`Error: ${err}`)
         })
-
     }
 
     return (
         <>
-            <form className="container" onSubmit={formHandler}>
+            <Header />
+    
+            <form className="container mr-5" onSubmit={formHandler}>
                 <div className="movie-form-container columns">
                     <div className="column">
-                        
-                        <div className="field">
+                        <div className="field mt-6">
                             <label className="label has-text-white">Title</label>
                             <div className="control">
                                 <input className="input" placeholder="e.g. Titanic" value={movieData.title} onChange={(e)=>{
@@ -121,6 +121,7 @@ const MovieForm = () => {
 
                                     setMovieData({...movieData,type:e.target.value})
                                 }}>
+                                    <option value="">Please Select:</option>
                                     <option value="movies">Movies</option>
                                     <option value="tv-shows">TV Shows</option> 
                                 </select>
@@ -211,8 +212,8 @@ const MovieForm = () => {
                                 }}/>
                             </div>
                         </div>
-                    
-                        <button className="button has-text-white" type="submit">Save</button>
+                        <MovieFormButton />
+                        {/* <button className="button has-text-white" type="submit">Save</button> */}
                     </div>
                     
                 </div>

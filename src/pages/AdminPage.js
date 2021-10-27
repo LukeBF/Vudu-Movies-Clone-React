@@ -12,6 +12,7 @@ import Header from '../components/Header';
 import AdminHeader from '../components/AdminHeader'
 import MovieForm from '../components/MovieForm'
 import MovieTable from '../components/MovieTable'
+import AdminLeftPanel from '../components/AdminLeftPanel';
 
 // React icons
 import {FaUserFriends, FaPlusCircle} from "react-icons/fa";
@@ -31,8 +32,9 @@ const AdminPage = (props) => {
             {/* <AdminHeader heading="Admin Panel"/> */}
             <Header />
             <div class="columns">
+            <AdminLeftPanel />
             {/* Left panel to navigate the different components*/}
-                <div className="column column-lp is-one-fifth has-background-white has-text-centered pt-6">
+                {/* <div className="column column-lp is-one-fifth has-background-white has-text-centered pt-6">
                     <a href="">
                         <h2 className="title is-3">Dashboard</h2>
                     </a>
@@ -54,22 +56,11 @@ const AdminPage = (props) => {
                             <span><RiMovie2Fill className="mr-2 lp-icon is-size-4"/></span><h2 className="title is-5 has-text-left">TV-Shows</h2>
                         </div>
                     </a>
-
-                    {/* <a href="">
-                        <div className="admin-titles mt-6">
-                            <span><BiMoviePlay className="mr-2 lp-icon"/></span><h2 className="title is-5 has-text-left">Movies</h2>
-                        </div>
-                    </a>
-
-                    <div className="admin-titles mt-6">
-                        <a>
-                            <span><RiMovie2Fill className="mr-2 lp-icon"/></span><h2 className="title is-5 has-text-left">TV-Shows</h2>
-                        </a>
-                    </div>  */}
                 </div>                    
-            </div>
+            </div> */}
             {/* Main area to display data and forms */}
 
+            {/* Toggle display between movie form and movie table */}
             {
                 display?
                 <div className="column px-6 py-6">
@@ -103,14 +94,7 @@ const AdminPage = (props) => {
                     </div>
                     <MovieForm />
                 </div>
-                }
-
-                {/* <div className="column px-6 py-6 hide">
-                    <MovieForm />
-                </div> */}
-                {/* // <div className="column px-6 py-6">
-                //     <MovieTable />
-                // </div> */}
+            }
                 
             </div>
         </>

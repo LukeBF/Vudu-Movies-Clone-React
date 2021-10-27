@@ -88,7 +88,7 @@ header a {
 }
 
 .row-container {
-  padding: 16px 32px;
+  padding: 32px;
 }
 
 .row-container > h2 {
@@ -234,6 +234,10 @@ header a {
   margin-bottom: 0;
 }
 
+textarea {
+  width: 100%;
+}
+
 /* Search */
 .search-container {
   width: 100%;
@@ -241,7 +245,9 @@ header a {
 
 /* Admin Panel */
 .column-lp {
-  height: auto;
+  height: 100%;
+  position: fixed;
+  overflow-x: hidden;
   /* max-height: 100vh; */
 }
 
@@ -260,6 +266,12 @@ header a {
 
 .table-container {
   height: 100vh;
+}
+
+.submit-btn {
+  width: 100%;
+  background-color: var(--highlight-blue);
+  border: none;
 }
 
 /* Details Page */

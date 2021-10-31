@@ -16,6 +16,7 @@ const Header = () => {
                     <a className="navbar-item" href="https://bulma.io">
                         {/* <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28"/> */}
                     </a>
+                    <p></p>
                     <a className="navbar-burger" id="burger">
                         <span aria-hidden="true"></span>
                         <span aria-hidden="true"></span>
@@ -54,7 +55,7 @@ const Header = () => {
                                         <span className="is-size-3 mr-2 has-text-white is-flex is-justify-content-center is-align-items-center">
                                             <BiUserCircle />
                                         </span>
-                                        <Link to="/users/login">
+                                        <Link to="/login">
                                              Logout
                                          </Link>
                                      </a>
@@ -68,7 +69,7 @@ const Header = () => {
                                 <>
                                     <a className="navbar-item is-flex">
                                         {/* Direct the visitor to the login page */}
-                                        <Link to="/users/login">
+                                        <Link to="/login">
                                              Sign in
                                          </Link>
                                      </a>
@@ -80,7 +81,7 @@ const Header = () => {
                                 // </a>
                             }
                             <a className="navbar-item">
-                                <Link to="/admin">
+                                <Link to="/admin/dashboard">
                                     Admin
                                 </Link>
                             </a>

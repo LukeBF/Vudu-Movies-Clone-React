@@ -2,14 +2,16 @@ import React,{useState,useContext} from 'react'
 
 import UserFormContext from '../context/UserFormContext';
 
+import {useHistory} from "react-router-dom"
+
 const SignupForm = () => {
 
     const [showPassword,setShowPassword] = useState(false);
     
     const {userFormData,setUserFormData} = useContext(UserFormContext)
+    
+    const history = useHistory();
     //console.log(userFormData)
-
-    const isRegister = false;
 
     const createUser = (e) => {
 
@@ -28,11 +30,12 @@ const SignupForm = () => {
        .then(()=>{
             
             alert(`An account was created for ${userFormData.fname} ${userFormData.lname}`)     
-            //history.push("/")
+            history.push("/")
         })
         .catch(err=>{
             console.log(`Error: ${err}`)
         })
+    
 
         setUserFormData({
             fname:"",
@@ -43,7 +46,6 @@ const SignupForm = () => {
             isAdmin:false
         })
     }
-       
 
     const handleShowPassword = () => {
         // Toggle the show password

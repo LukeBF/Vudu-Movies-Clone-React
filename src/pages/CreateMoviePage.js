@@ -1,11 +1,11 @@
 import React from 'react'
 
-import MovieForm from '../components/MovieForm'
+import AddMovieForm from '../components/AddMovieForm'
 
 const CreateMoviePage = () => {
     return (
         <div>
-            <MovieForm heading="Create Movie"/>
+            <AddMovieForm heading="Create Movie"/>
         </div>
     )
 }

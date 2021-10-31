@@ -1,19 +1,15 @@
 import React,{useState,useContext} from 'react'
 
 //Components
-import Header from '../components/Header';
+import Header from './Header';
+import AddMovieFormContainer from './AddMovieFormContainer';
 import MovieFormButton from './MovieFormButton';
-import AdminLeftPanel from './AdminLeftPanel';
 
 //Context
 import MovieContext from '../context/MovieContext';
 import FormUpdateContext from '../context/FormUpdateContext';
 import DisplayContext from '../context/displayContext';
 
- import {Link} from 'react-router-dom'
-
-//Icons
-import { AiOutlineEye } from "react-icons/ai";
 
 const MovieForm = () => {
 
@@ -90,8 +86,8 @@ const MovieForm = () => {
     return (
         <>
             <Header />
-    
             <form className="container mr-5" onSubmit={formHandler}>
+                <h2 className="has-text-white form-title">Add Movie</h2>
                 <div className="movie-form-container columns">
                     <div className="column">
                         <div className="field mt-6">
@@ -121,7 +117,7 @@ const MovieForm = () => {
 
                                     setMovieData({...movieData,type:e.target.value})
                                 }}>
-                                    <option value="">Please Select:</option>
+                                    <option value="">Please Select</option>
                                     <option value="movies">Movies</option>
                                     <option value="tv-shows">TV Shows</option> 
                                 </select>
@@ -217,8 +213,7 @@ const MovieForm = () => {
                     </div>
                     
                 </div>
-            </form>
-            
+            </form>   
         </>
     )
 }

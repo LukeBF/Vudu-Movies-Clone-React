@@ -13,25 +13,45 @@ const Genres = () => {
             <div className="row-container">
                 <h2>Genres</h2>
                 <div className="genre-items grid grid-col-5 grid-column-gap">
-                    <Link to=""><div className="grid genre-item" style={{backgroundImage:`url("${ActionBanner}")`}}>
-                         <p>Action</p>
-                    </div></Link>
-                    
-                    <Link to=""><div className="grid genre-item" style={{backgroundImage:`url("${ComedyBanner}")`}}>
-                        <p>Comedy</p>
-                    </div></Link>
-                    
-                    <Link to=""><div className="grid genre-item" style={{backgroundImage:`url("${ThrillerBanner}")`}}>
-                        <p>Thriller</p>
-                    </div></Link>
-                    
-                    <Link to=""><div className="grid genre-item" style={{backgroundImage:`url("${AnimationBanner}")`}}>
-                        <p>Animation</p>
-                    </div></Link> 
+                    {/* <div className="genre-container">
+                        <Link to="" className="overlay">
+                            <div className="grid genre-item" style={{backgroundImage:`url("${ActionBanner}")`}}>
+                                <p>Action</p>
+                            </div>
+                        </Link>
+                    </div> */}
+                    <div className="genre-container">
+                        <Link to="" className="overlay">
+                            <div className="grid genre-item" style={{backgroundImage:`url("${ActionBanner}")`}}>
+                                <p style={{fontSize:"2rem"}}>Action</p>
+                            </div>
+                        </Link>
+                        <div className="color-overlay"></div>
+                    </div>
 
-                    <Link to=""><div className="grid genre-item" style={{backgroundImage:`url("${DramaBanner}")`}}>
-                        <p>Drama</p>
-                    </div></Link> 
+                    <div className="genre-container">
+                        <Link to=""><div className="grid genre-item" style={{backgroundImage:`url("${ComedyBanner}")`}}>
+                            <p style={{fontSize:"2rem"}}>Comedy</p>
+                        </div></Link>
+                    </div>
+
+                    <div className="genre-container">
+                        <Link to=""><div className="grid genre-item" style={{backgroundImage:`url("${ThrillerBanner}")`}}>
+                            <p style={{fontSize:"2rem"}}>Thriller</p>
+                        </div></Link>
+                    </div>
+
+                    <div className="genre-container">
+                        <Link to=""><div className="grid genre-item" style={{backgroundImage:`url("${AnimationBanner}")`}}>
+                            <p style={{fontSize:"2rem"}}>Animation</p>
+                        </div></Link> 
+                    </div>
+
+                    <div className="genre-container">
+                        <Link to=""><div className="grid genre-item" style={{backgroundImage:`url("${DramaBanner}")`}}>
+                            <p style={{fontSize:"2rem"}}>Drama</p>
+                        </div></Link> 
+                    </div>
                 </div>
             </div>
         </div>

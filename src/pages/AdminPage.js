@@ -10,7 +10,7 @@ import {Link} from 'react-router-dom'
 // Components
 import Header from '../components/Header';
 import AdminHeader from '../components/AdminHeader'
-import MovieForm from '../components/MovieForm'
+import AddMovieForm from '../components/AddMovieForm'
 import MovieTable from '../components/MovieTable'
 import AdminLeftPanel from '../components/AdminLeftPanel';
 
@@ -92,7 +92,7 @@ const AdminPage = (props) => {
                             </div>
                         </div>
                     </div>
-                    <MovieForm />
+                    <AddMovieForm />
                 </div>
             }
                 

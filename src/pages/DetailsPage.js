@@ -11,7 +11,7 @@ const DetailsPage = (props) => {
         overview:""
     })
 
-    const  {id} =useParams();
+    const {id} =useParams();
 
     useEffect(()=>{
         fetch("http://localhost:5000/movies/"+id)

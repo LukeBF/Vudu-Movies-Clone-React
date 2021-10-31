@@ -11,6 +11,19 @@
   outline: none;
 }
 
+.genre-container {
+  background-color: #000000;
+}
+
+.genre-container p {
+  color: #ffffff;
+}
+
+.color-overlay {
+  background-color: #000000;
+  opacity: 0.7;
+}
+
 /* Admin Page */
 /* Bulma Utilities */
 .file-cta,

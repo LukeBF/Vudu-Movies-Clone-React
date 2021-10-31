@@ -41,6 +41,7 @@ const MovieTable = () => {
                 <thead>
                     <tr>
                         {/* <th><h3 className="title is-5">Number</h3></th> */}
+                        <th><h3 className="title is-5">ID</h3></th>
                         <th><h3 className="title is-5">Title</h3></th>
                         <th><h3 className="title is-5">Genre</h3></th>
                         <th><h3 className="title is-5">Rating</h3></th>

@@ -57,7 +57,7 @@ const TableRow = (props) => {
                 display?
                 <tr>
                     {/* <td>{props.number}</td> */}
-                    <td>{props.id}</td>
+                    {/* <td>{props.id}</td> */}
                     <td>{props.title}</td>
                     <td>{props.genre}</td>
                     <td>{props.rating}</td>

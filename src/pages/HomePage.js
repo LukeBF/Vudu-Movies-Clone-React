@@ -71,12 +71,12 @@ const HomePage = () => {
                     {/* <section id="hero-section" className="banner">
                         <Hero image={AvengersBanner}/>
                     </section> */}
-                    <section id="title-search">
+                    {/* <section id="title-search">
                         <SearchTitles placeholder="Search"/>
-                    </section>
-                    <section id="movie-genres">
+                    </section> */}
+                    {/* <section id="movie-genres">
                         <Genres />
-                    </section>
+                    </section> */}
                     <section id="movie-list-section">
                         <FeaturedMovies heading="Featured Movies"/>
                         <FeaturedTvShows heading="Featured TV-Shows"/>

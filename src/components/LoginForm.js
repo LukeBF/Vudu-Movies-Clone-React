@@ -5,6 +5,8 @@ import {useHistory,useParams,useLocation} from "react-router-dom";
 // JWT
 import jwt_decode from "jwt-decode";
 
+import logo from "../assets/img/logos/streamee-no-bg.png"
+
 // Context
 import LoginContext from "../context/LoginContext";
 // import UserFormContext from '../context/UserFormContext';
@@ -50,6 +52,7 @@ const LoginForm = () => {
             /**
              * redirect
              */
+           
              if(currentLoggedInUser.isAdmin===true)
             {
                 alert("You are an admin")
@@ -191,6 +194,9 @@ const LoginForm = () => {
     return (
         <div className="is-flex is-align-items-center is-justify-content-center">
             <div className="main-wrapper mt-6">
+                <Link to="/">
+                    <img className="logo" src={logo} style={{width:"70%",marginLeft:"60px"}}/>
+                </Link>
                 <div>
                     <h2 className="title" style={{textAlign:"center"}}>Sign in</h2>
                 </div>

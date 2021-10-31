@@ -24,6 +24,11 @@
   opacity: 0.7;
 }
 
+.logo {
+  width: 70%;
+  margin: 0 auto;
+}
+
 /* Admin Page */
 /* Bulma Utilities */
 .file-cta,

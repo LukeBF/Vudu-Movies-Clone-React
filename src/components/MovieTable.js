@@ -41,7 +41,7 @@ const MovieTable = () => {
                 <thead>
                     <tr>
                         {/* <th><h3 className="title is-5">Number</h3></th> */}
-                        <th><h3 className="title is-5">ID</h3></th>
+                        {/* <th><h3 className="title is-5">ID</h3></th> */}
                         <th><h3 className="title is-5">Title</h3></th>
                         <th><h3 className="title is-5">Genre</h3></th>
                         <th><h3 className="title is-5">Rating</h3></th>
@@ -56,7 +56,7 @@ const MovieTable = () => {
 
                 <tbody>
                     {movies.map((movie)=>(
-                        <TableRow key={movie.id} id={movie._id} poster={movie.imgPath} title={movie.title} genre={movie.genre} rating={movie.rating} length={movie.length} release={movie.release} edit={FaEdit} delete={FaTrashAlt}/>
+                        <TableRow key={movie.id} id={movie._id} poster={movie.imgPath} title={movie.title} genre={movie.genre} rating={movie.rating} length={movie.length} release={movie.release.substring(0,10)} edit={FaEdit} delete={FaTrashAlt}/>
                     ))}
                 </tbody>
             </table>

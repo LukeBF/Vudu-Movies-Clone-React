@@ -10,8 +10,7 @@ import logo from "../assets/img/logos/streamee-no-bg.png"
 //Context
 import LoginContext from "../context/LoginContext";
 
-
-const Header = () => {
+const UserHeader = () => {
 
     const {isLogin,setIsLogin} = useContext(LoginContext);
 
@@ -28,7 +27,8 @@ const Header = () => {
     }
 
     return (
-        <header>
+        <>
+             <header>
             <nav className="navbar is-fixed-top">
                 <div className="navbar-brand">
                     <a className="navbar-item" href="https://bulma.io">
@@ -86,7 +86,7 @@ const Header = () => {
                                          </Link>
                                      </a>
                                      <a className="navbar-item">
-                                        <Link to="/admin/dashboard">
+                                        <Link to="/user/dashboard">
                                              Dashboard
                                          </Link>
                                      </a>
@@ -117,8 +117,8 @@ const Header = () => {
                 </div>
             </nav>
         </header>
-
+        </>
     )
 }
 
-export default Header
+export default UserHeader

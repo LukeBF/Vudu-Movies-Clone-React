@@ -13,8 +13,10 @@ import MoviesPage from '../pages/MoviesPage';
 import ShowsPage from '../pages/ShowsPage';
 import LogInPage from '../pages/LogInPage';
 import AdminPage from '../pages/AdminPage';
+import UserDashboard from '../pages/UserDashboard';
 import CreateMoviePage from '../pages/CreateMoviePage';
 import EditMoviePage from '../pages/EditMoviePage';
+import SearchPage from '../pages/SearchPage';
 
 
 // import FeaturedContainer from './FeaturedTitles'
@@ -91,6 +93,7 @@ const App = () => {
 
   const [isLogin, setIsLogin] = useState({
     status:false,
+    isAdmin:false,
     user:{
 
     }
@@ -185,7 +188,8 @@ const App = () => {
               </Route> */}
               <ProtectedRoute path="/admin/dashboard" isAdmin={true} component={<AdminPage/>}/>
 
-              <ProtectedRoute path="/user/dashboard" isAdmin={false} component={(<h1>User Dashboard</h1>)}/>
+              {/* <ProtectedRoute path="/user/dashboard" isAdmin={false} component={(<h1>User Dashboard</h1>)}/> */}
+              <ProtectedRoute path="/user/dashboard" isAdmin={false} component={<UserDashboard />}/>
               
               {/* <Route path="/update-movie">
                   <EditMoviePage />
@@ -203,6 +207,10 @@ const App = () => {
               <Route path="/card/details/:id">
                   <DetailsPage />
               </Route>
+
+              {/* <Route>
+                  <SearchPage path="/search"/>
+              </Route> */}
           </Switch>
         </LoginContext.Provider>
         </ViewUpdateFormContext.Provider>
